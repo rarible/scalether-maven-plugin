@@ -1,26 +1,30 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.rarible.scalether</groupId>
+    <groupId>io.daonomic.scalether</groupId>
     <artifactId>scalether-maven-plugin</artifactId>
-    <version>0.1.2</version>
+    <version>0.1.3</version>
     <packaging>maven-plugin</packaging>
     <description>maven plugin to generate smart contract wrappers</description>
 
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub OWNER Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/rariblecom/scalether-maven-plugin</url>
-        </repository>
-    </distributionManagement>
-
     <repositories>
         <repository>
-            <id>nexus-maven-public</id>
-            <url>http://10.7.3.6:8083/repository/maven-public/</url>
+            <id>nexus-ext-maven-public</id>
+            <name>nexus-ext-maven-public</name>
+            <url>https://repo.rarible.org/repository/maven-public/</url>
         </repository>
     </repositories>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <url>http://nexus-ext.rarible.int/repository/maven-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexus-releases</id>
+            <url>http://nexus-ext.rarible.int/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -56,7 +60,7 @@
             <version>${maven-plugin.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.rarible.scalether</groupId>
+            <groupId> io.daonomic.scalether</groupId>
             <artifactId>generator</artifactId>
             <version>${project.version}</version>
         </dependency>
