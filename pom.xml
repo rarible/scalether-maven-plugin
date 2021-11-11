@@ -60,7 +60,7 @@
             <version>${maven-plugin.version}</version>
         </dependency>
         <dependency>
-            <groupId> io.daonomic.scalether</groupId>
+            <groupId>io.daonomic.scalether</groupId>
             <artifactId>generator</artifactId>
             <version>${project.version}</version>
         </dependency>
