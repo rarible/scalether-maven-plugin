@@ -4,7 +4,7 @@
 
 ```xml
 <plugin>
-    <groupId>com.rarible.scalether</groupId>
+    <groupId>io.daonomic.scalether</groupId>
     <artifactId>scalether-maven-plugin</artifactId>
     <version>${scalether.version}</version>
     <executions>
