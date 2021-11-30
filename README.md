@@ -1,6 +1,10 @@
-# Generate smart contract wrappers and use them to call/execute transactions
+# Maven plugin for generation of contract wrappers
 
-## add scalether-maven-plugin to pom.xml
+Generate smart contract wrappers and use them to call/execute transactions.
+
+### Usage
+
+Add scalether-maven-plugin to pom.xml
 
 ```xml
 <plugin>
@@ -38,3 +42,11 @@
 ```
 
 ABI json files and Truffle output files are supported.
+
+### Suggestions
+
+You are welcome to [suggest features](https://github.com/rarible/protocol/discussions) and [report bugs found](https://github.com/rarible/protocol/issues)!
+
+### License
+
+Maven plugin is available under the [MIT License](LICENSE.md).
